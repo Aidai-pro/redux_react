@@ -1,0 +1,222 @@
+/* 
+ * Стили для Header - Приложение поиска попутчиков в Кыргызстане
+ * Цветовая палитра: голубые, белые, серые оттенки
+ */
+
+/* Светлая тема переменные */
+.header.light-theme {
+  --header-bg: linear-gradient(135deg, #1e88e5 0%, #1976d2 100%);
+  --header-shadow: rgba(30, 136, 229, 0.2);
+  --text-color: white;
+  --nav-bg-hover: rgba(255, 255, 255, 0.1);
+  --btn-bg: white;
+  --btn-color: #1e88e5;
+  --btn-hover-bg: #f5f5f5;
+  --theme-toggle-bg: rgba(255, 255, 255, 0.1);
+  --theme-toggle-border: rgba(255, 255, 255, 0.3);
+  --profile-bg: rgba(255, 255, 255, 0.1);
+  --profile-hover-bg: rgba(255, 255, 255, 0.2);
+}
+
+/* Темная тема переменные */
+.header.dark-theme {
+  --header-bg: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  --header-shadow: rgba(21, 101, 192, 0.3);
+  --text-color: white;
+  --nav-bg-hover: rgba(255, 255, 255, 0.1);
+  --btn-bg: #1e88e5;
+  --btn-color: white;
+  --btn-hover-bg: #1976d2;
+  --theme-toggle-bg: rgba(255, 255, 255, 0.1);
+  --theme-toggle-border: rgba(255, 255, 255, 0.4);
+  --profile-bg: rgba(255, 255, 255, 0.1);
+  --profile-hover-bg: rgba(255, 255, 255, 0.2);
+}
+
+/* Основные стили хедера */
+.header {
+  background: var(--header-bg);
+  color: var(--text-color);
+  padding: 16px 24px;
+  box-shadow: 0 4px 12px var(--header-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип и название приложения */
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.app-slogan {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: -4px;
+}
+
+/* Навигация */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: var(--nav-bg-hover);
+  color: var(--text-color);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+/* Кнопки */
+.create-ride-btn {
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-ride-btn:hover {
+  background: var(--btn-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Тема */
+.theme-toggle {
+  background: var(--theme-toggle-bg);
+  border: 2px solid var(--theme-toggle-border);
+  color: var(--text-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.theme-toggle:hover {
+  background: var(--profile-hover-bg);
+  transform: rotate(15deg);
+}
+
+/* Контейнер для темы и профиля */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Профиль пользователя */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--profile-bg);
+  transition: all 0.3s ease;
+}
+
+.user-profile:hover {
+  background: var(--profile-hover-bg);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Для мобильной версии */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .user-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
