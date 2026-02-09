@@ -22,7 +22,6 @@ const Header = () => {
                 <nav className="nav-links">
                     <a href="/search" className="nav-link">Поиск поездок</a>
                     <a href="/trips" className="nav-link active"> Мои поездки</a>
-                    <a href="/messages" className="nav-link">Сообщения</a>
                     <a href="/reviews" className="nav-link">Отзывы</a>
                     
                     <button className="create-ride-btn">
@@ -37,7 +36,7 @@ const Header = () => {
                         onClick={() => dispatch(toggleTheme())}
                         title={theme === 'dark' ? 'Светлая тема' : 'Темная тема'}
                     >
-                        {theme === 'dark' ? '☀️' : '🌙'}
+                        {theme === 'dark' ? 'D' : 'L'}
                     </button>
                     
                     <div className="user-profile">

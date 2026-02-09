@@ -1,0 +1,164 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Загрузка */
+.loading {
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Индикатор загрузки при клике */
+.detail-loading {
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ddd;
+    border-top-color: #1e88e5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Список поездок */
+.rides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.ride-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.ride-card:hover {
+    border-color: #1e88e5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.route h4 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e88e5;
+}
+
+.ride-info-small {
+    margin: 15px 0;
+}
+
+.ride-info-small div {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.ride-info-small strong {
+    color: #333;
+}
+
+.description-preview {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.click-hint {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 8px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+/* Детали поездки */
+.back-btn {
+    padding: 10px 20px;
+    background: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.detail-card {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.detail-card h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+    text-align: center;
+}
+
+.ride-info {
+    margin: 20px 0;
+}
+
+.ride-info div {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ride-info div:last-child {
+    border-bottom: none;
+}
+
+.ride-info strong {
+    color: #333;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.description h3 {
+    margin: 20px 0 10px 0;
+    color: #333;
+}
+
+.description p {
+    line-height: 1.6;
+    color: #555;
+}
+

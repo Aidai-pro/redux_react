@@ -1,8 +1,3 @@
-/* 
- * Стили для Header - Приложение поиска попутчиков в Кыргызстане
- * Цветовая палитра: голубые, белые, серые оттенки
- */
-
 /* Светлая тема переменные */
 .header.light-theme {
   --header-bg: linear-gradient(135deg, #1e88e5 0%, #1976d2 100%);
@@ -202,21 +197,3 @@
   font-size: 14px;
 }
 
-/* Для мобильной версии */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .nav-links {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .user-actions {
-    width: 100%;
-    justify-content: center;
-  }
-}
